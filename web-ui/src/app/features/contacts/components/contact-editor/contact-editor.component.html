@@ -1,0 +1,41 @@
+<form [formGroup]="fm.form" (submit)="handleSubmitClicked()">
+  <div class="form-group">
+    <label [for]="fm.forenameControlName">Forename <span class="text-muted">(Set as 'error' to error)</span></label>
+    <input
+      type="text"
+      class="form-control"
+      [class.is-invalid]="fm.forenameControl.touched && fm.forenameControl.invalid"
+      [formControlName]="fm.forenameControlName"
+      [name]="fm.forenameControlName"
+    />
+  </div>
+  <div class="form-group">
+    <label [for]="fm.surnameControlName">Surname</label>
+    <input
+      type="text"
+      class="form-control"
+      [class.is-invalid]="fm.surnameControl.touched && fm.surnameControl.invalid"
+      [formControlName]="fm.surnameControlName"
+      [name]="fm.surnameControlName"
+    />
+  </div>
+  <div class="form-group">
+    <label [for]="fm.emailAddressControlName">Email address</label>
+    <input
+      type="text"
+      class="form-control"
+      [class.is-invalid]="fm.emailAddressControl.touched && fm.emailAddressControl.invalid"
+      [formControlName]="fm.emailAddressControlName"
+      [name]="fm.emailAddressControlName"
+    />
+  </div>
+  <button class="btn btn-primary mr-1" type="submit" [disabled]="!fm.form.dirty || !fm.form.valid">
+    {{ initialData ? 'Update' : 'Create' }}
+  </button>
+  <button class="btn btn-light mr-1" type="button" [disabled]="!fm.form.dirty" (click)="fm.reset()">
+    Reset
+  </button>
+  <button class="btn btn-danger" type="button" *ngIf="initialData" (click)="handleClickOnDelete()">
+    Delete
+  </button>
+</form>

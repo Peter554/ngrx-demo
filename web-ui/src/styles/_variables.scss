@@ -1,0 +1,53 @@
+// =============
+// Non-bootstrap
+// =============
+
+$bg: #fffefc;
+$header-height: 4rem;
+
+// =========
+// Bootstrap
+// =========
+
+// Grays
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Colors
+$primary: #125f93;
+$danger: #ae1b15;
+$light: $gray-200;
+$body-bg: $bg;
+
+// Forms
+$input-bg: $bg;
+$form-feedback-icon-invalid: none;
+
+// Cards
+$card-bg: $bg;
+
+// Spacing
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3
+);
+
+// Display text
+$display1-size: 2rem;
+
+// Misc
+$border-radius: 2px;

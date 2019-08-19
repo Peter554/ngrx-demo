@@ -1,0 +1,11 @@
+@import 'variables';
+
+:host {
+  display: block;
+  position: fixed;
+  top: $header-height;
+  right: 0;
+  bottom: 0;
+  box-shadow: -10px 0px 40px -5px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}

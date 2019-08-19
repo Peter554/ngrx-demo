@@ -1,0 +1,8 @@
+<ng-container *ngIf="data$ | async as data">
+  <div [hidden]="data.showSpinner" class="card mb-1" *ngFor="let contact of data.contacts | orderBySurname">
+    <div class="card-body">
+      <a [routerLink]="['/contacts', contact.id]">{{ contact | fullName }}</a>
+    </div>
+  </div>
+  <app-spinner [hidden]="!data.showSpinner"></app-spinner>
+</ng-container>
