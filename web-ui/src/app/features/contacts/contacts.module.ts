@@ -7,7 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { ContactsPageComponent } from './components/contacts-page/contacts-page.component';
 import { ContactsListingComponent } from './components/contacts-listing/contacts-listing.component';
-import contactsReducer from './contacts.reducer';
+import { contactsReducer } from './contacts.reducer';
 import { ContactsAPIEffects } from './contacts-api/contacts-api.effects';
 import { ContactsListingEffects } from './components/contacts-listing/contacts-listing.effects';
 import { CreateContactPageComponent } from './components/create-contact-page/create-contact-page.component';

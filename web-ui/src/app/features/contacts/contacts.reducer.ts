@@ -13,8 +13,8 @@ const initialState: ContactsState = {
   isDeletingContact: false
 };
 
-const contactsReducer = createReducer<ContactsState>(initialState, ...onContactsAPIActions);
+const reducer = createReducer<ContactsState>(initialState, ...onContactsAPIActions);
 
-export default function reducer(state: ContactsState | undefined, action: Action) {
-  return contactsReducer(state, action);
+export function contactsReducer(state: ContactsState | undefined, action: Action) {
+  return reducer(state, action);
 }

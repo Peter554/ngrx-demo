@@ -8,7 +8,7 @@ const initialState: CoreState = {
   notificationsMenuIsOpen: false
 };
 
-const coreReducer = createReducer<CoreState>(
+const reducer = createReducer<CoreState>(
   initialState,
   on(notificationActions.addNotification, (state, { notification }) => {
     return produce(state, draft => {
@@ -28,6 +28,6 @@ const coreReducer = createReducer<CoreState>(
   })
 );
 
-export default function reducer(state: CoreState | undefined, action: Action) {
-  return coreReducer(state, action);
+export function coreReducer(state: CoreState | undefined, action: Action) {
+  return reducer(state, action);
 }

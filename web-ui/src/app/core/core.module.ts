@@ -6,7 +6,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { NotificationsComponent } from './notifications/notifications/notifications.component';
 import { UnreadPipe } from './notifications/unread.pipe';
 import { SharedModule } from '../shared/shared.module';
-import coreReducer from './core.reducer';
+import { coreReducer } from './core.reducer';
 import { NotificationsEffects } from './notifications/notifications.effects';
 
 @NgModule({
